@@ -17,8 +17,9 @@ st.markdown("Masukkan hasil **Complete Blood Count (CBC)** untuk memprediksi jen
 
 # Fitur input (14 parameter CBC sesuai dataset)
 features = [
-    "HGB", "RBC", "HCT", "MCV", "MCH", "MCHC", 
-    "PLT", "WBC", "NEUT%", "NEUT#", "LYMPH%", "LYMPH#", "MXD%", "MXD#"
+    "WBC", "LYMp", "NEUTp", "LYMn", "NEUTn",
+    "RBC", "HGB", "HCT", "MCV", "MCH",
+    "MCHC", "PLT", "PDW", "PCT"
 ]
 
 # Input form

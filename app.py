@@ -8,6 +8,15 @@ st.set_page_config(
     layout="wide",   # <--- ini yang bikin full screen
 )
 
+hide_scrollbar = """
+    <style>
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    </style>
+"""
+st.markdown(hide_scrollbar, unsafe_allow_html=True)
+
 # --------------------
 # Load model & tools
 # --------------------

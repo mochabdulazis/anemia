@@ -2,6 +2,12 @@ import streamlit as st
 import numpy as np
 import joblib
 
+st.set_page_config(
+    page_title="Anemia Detection System",
+    page_icon="🩸",
+    layout="wide",   # <--- ini yang bikin full screen
+)
+
 # --------------------
 # Load model & tools
 # --------------------

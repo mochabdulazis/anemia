@@ -24,15 +24,20 @@ features = [
 
 # Input form
 # --------------------
-# Layout 2 kolom: kiri input, kanan output
+# Layout 2 kolom utama: kiri input, kanan output
 # --------------------
-col1, col2 = st.columns([2, 1])  # kiri lebih lebar
+col1, col2 = st.columns([2, 1])  # kiri lebih lebar untuk form
 
 with col1:
     st.subheader("📝 Input Data CBC")
     user_input = []
-    for feat in features:
-        val = st.number_input(f"{feat}", value=0.0, format="%.2f")
+    col1a, col1b = st.columns(2)  # bagi 2 kolom lagi di dalam form kiri
+
+    for i, feat in enumerate(features):
+        if i % 2 == 0:
+            val = col1a.number_input(f"{feat}", value=0.0, format="%.2f")
+        else:
+            val = col1b.number_input(f"{feat}", value=0.0, format="%.2f")
         user_input.append(val)
 
     user_array = np.array(user_input).reshape(1, -1)
